@@ -66,7 +66,8 @@ This tool is for personal use only. Please respect YouTube's Terms of Service an
 
 ## Contributing
 
-Feel free to submit issues and pull requests.
+Feel free to submit issues and pull requests. Hope someone can make a ui for it in tkinter mabye add a playing
+feature like spotify.
 
 ## License
 
