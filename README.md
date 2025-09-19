@@ -47,19 +47,36 @@ Enter download folder (press Enter for 'downloads'): my_music
 ```
 
 ### Command Line Mode
-You can also pass arguments directly:
+You can pass arguments directly using several formats:
+
+**Positional arguments:**
 ```bash
-python main.py url=https://www.youtube.com/playlist?list=PLrAXtmRdnEQy...
+python main.py https://www.youtube.com/playlist?list=PLrAXtmRdnEQy...
+python main.py https://www.youtube.com/playlist?list=PLrAXtmRdnEQy... my_music
 ```
 
-With custom download folder:
+**Named arguments:**
 ```bash
+python main.py url=https://www.youtube.com/playlist?list=PLrAXtmRdnEQy...
 python main.py url=https://www.youtube.com/playlist?list=PLrAXtmRdnEQy... folder=my_music
+```
+
+**Mixed arguments:**
+```bash
+python main.py --folder=my_music https://www.youtube.com/playlist?list=PLrAXtmRdnEQy...
+```
+
+**Help:**
+```bash
+python main.py -h
+python main.py --help
 ```
 
 Arguments:
 - `url=`: Required. The YouTube playlist URL
 - `folder=`: Optional. Download folder (defaults to 'downloads')
+- `--folder=`: Alternative way to specify download folder
+- `-h, --help`: Show usage information
 
 ## How it Works
 
