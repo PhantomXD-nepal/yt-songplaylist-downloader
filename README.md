@@ -30,7 +30,8 @@ A simple Python script to download audio from YouTube playlists using yt-dlp.
 
 ## Usage
 
-Run the script:
+### Interactive Mode
+Run the script without arguments for interactive prompts:
 ```bash
 python main.py
 ```
@@ -44,6 +45,21 @@ Example:
 Enter YouTube playlist URL: https://www.youtube.com/playlist?list=PLrAXtmRdnEQy...
 Enter download folder (press Enter for 'downloads'): my_music
 ```
+
+### Command Line Mode
+You can also pass arguments directly:
+```bash
+python main.py url=https://www.youtube.com/playlist?list=PLrAXtmRdnEQy...
+```
+
+With custom download folder:
+```bash
+python main.py url=https://www.youtube.com/playlist?list=PLrAXtmRdnEQy... folder=my_music
+```
+
+Arguments:
+- `url=`: Required. The YouTube playlist URL
+- `folder=`: Optional. Download folder (defaults to 'downloads')
 
 ## How it Works
 
