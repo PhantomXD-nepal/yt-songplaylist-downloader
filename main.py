@@ -9,9 +9,11 @@ def download_playlist(youtube_url, download_folder="downloads"):
     ydl_opts = {
         'format': 'bestaudio/best',
         'outtmpl': os.path.join(download_folder, '%(title)s.%(ext)s'),
-        'extractaudio': True,
-        'audioformat': 'mp3',
-        'audioquality': '192K',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }],
         'ignoreerrors': True,
     }
     
